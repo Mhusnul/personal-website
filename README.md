@@ -1,12 +1,41 @@
-# React + Vite
+# 🌟 Personal Interactive Website – Test Project for Cretivox
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ini adalah proyek test saya untuk Cretivox Internship Experience II Batch, di mana saya diminta membuat **website personal satu halaman** yang tidak hanya berfungsi, tapi juga **keren, interaktif, dan punya jiwa.**
 
-Currently, two official plugins are available:
+## 🎯 Tujuan Proyek
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> “Lihat sejauh mana lo bisa bikin website personal yang gak cuma jalan, tapi juga keren dan interaktif.”
 
-## Expanding the ESLint configuration
+Tantangan dalam proyek ini mencakup:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✨ Menggunakan animasi **GSAP**, terutama animasi yang **scroll-triggered** agar tampilan terasa hidup.
+- 📁 Menunjukkan **kerapian struktur kode dan file**.
+- 👤 Menampilkan **identitas diri** secara menarik dan berkarakter.
+- 🚀 Membuat semuanya dari **nol sampai live**: coding, animasi, hingga deploy.
+
+---
+
+## 👨‍💻 Tentang Saya
+
+Saya Muhamad Husnul Maad, seorang Front-End Developer yang passionate dengan animasi web, pengalaman pengguna, dan clean code. Website ini adalah cerminan dari siapa saya dan bagaimana saya mengekspresikan kreativitas lewat baris-baris kode.
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+- **React** – React yang cepat dan powerful
+- **Tailwind CSS** – Utility-first CSS framework untuk styling
+- **GSAP (GreenSock)** – Library animasi JavaScript
+- **Framer Motion** – Untuk animasi komponen React
+- **Vercel** – Untuk deployment
+
+---
+
+## ⚙️ Fitur Utama
+
+- 🎬 **Animasi Interaktif**: Transisi mulus dan efek scroll-triggered menggunakan GSAP
+- 🖱️ **Scroll Experience**: Elemen yang muncul dan bergerak seiring pengunjung scroll
+- 🧩 **Komponen Modular**: Struktur kode bersih dan mudah di-maintain
+- 💡 **Interaktif & Engaging**: Pengunjung diajak untuk eksplorasi isi halaman, bukan hanya melihat
+
+---
