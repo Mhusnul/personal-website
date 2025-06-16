@@ -136,7 +136,7 @@ function ContactSection() {
                 },
                 {
                   name: "Instagram",
-                  href: "https://www.instagram.com/muhamadhusnul_22/",
+                  href: "instagram.com/muhamadhusnul_22/",
                 },
               ].map((social, i) => (
                 <motion.a
@@ -179,6 +179,7 @@ function ContactSection() {
                     className="w-full p-3 bg-gray-800/30 border border-gray-700/20 rounded-lg text-white placeholder-gray-500 focus:border-purple-600 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                     placeholder={`Enter your ${field}`}
                     whileFocus={{ scale: 1.02 }}
+                    required
                   />
                 ) : (
                   <motion.input
@@ -189,6 +190,7 @@ function ContactSection() {
                     className="w-full p-3 bg-gray-800/30 border border-gray-700/20 rounded-lg text-white placeholder-gray-500 focus:border-purple-600 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                     placeholder={`Enter your ${field}`}
                     whileFocus={{ scale: 1.02 }}
+                    required
                   />
                 )}
               </motion.div>

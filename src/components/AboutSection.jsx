@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -23,9 +23,9 @@ function AboutSection() {
   ];
 
   const stats = [
-    { value: "1+", label: "Years" },
-    { value: "10+", label: "Projects" },
-    { value: "10+", label: "Clients" },
+    { value: "1+", label: "Years of Experience" },
+    { value: "10+", label: "Projects Completed" },
+    { value: "10+", label: "Satisfied Clients" },
   ];
 
   const hoverVariants = {
@@ -166,16 +166,15 @@ function AboutSection() {
     <section
       id="about"
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center relative"
+      className="min-h-screen flex items-center justify-center relative py-8 sm:py-16 md:py-24"
     >
-      <div className="container mx-auto px-6 z-10 flex flex-col items-center space-y-8">
-        import {motion} from 'framer-motion'; // Profile image parent container
+      <div className="container mx-auto px-4 sm:px-6 z-10 flex flex-col items-center space-y-8">
         <motion.div
           ref={profileImageRef}
-          className="relative w-64 h-64 mx-auto"
+          className="relative w-48 h-48 sm:w-64 sm:h-64 mx-auto"
         >
           <motion.div
-            className="relative w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-full flex items-center justify-center border-2 border-purple-500/30 overflow-hidden"
+            className="relative w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-full flex items-center justify-center border-2 border-[rgba(139,92,246,0.3)] overflow-hidden"
             whileHover={{
               scale: 1.05,
               boxShadow: "0 4px 16px rgba(139, 92, 246, 0.3)",
@@ -185,18 +184,27 @@ function AboutSection() {
           >
             <img
               src={profile}
-              alt="Profile"
+              alt="Muhamad Husnul Maad's profile"
               className="w-full h-full object-cover opacity-80"
             />
           </motion.div>
-
           <motion.div
-            className="absolute bottom-4 right-4 w-6 h-6 bg-green-500 rounded-full border-2 border-white/20"
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            className="absolute bottom-4 right-4 w-6 h-6 bg-[rgba(57,255,20,1)] rounded-full border-2 border-[rgba(255,255,255,0.2)]"
+            animate={{
+              scale: [1, 1.2, 1],
+              boxShadow: [
+                "0 0 8px rgba(57,255,20,0.6)",
+                "0 0 16px rgba(57,255,20,0.8)",
+                "0 0 8px rgba(57,255,20,0.6)",
+              ],
+            }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />
         </motion.div>
-        <motion.div ref={statsRef} className="flex justify-center gap-8 mb-8">
+        <motion.div
+          ref={statsRef}
+          className="flex justify-center gap-4 sm:gap-8 mb-8"
+        >
           {stats.map((stat) => (
             <motion.div
               key={stat.label}
@@ -204,14 +212,19 @@ function AboutSection() {
               variants={statHoverVariants}
               whileHover="hover"
             >
-              <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <div className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[rgba(167,139,250,1)] to-[rgba(34,211,238,1)]">
                 {stat.value}
               </div>
-              <div className="text-base text-white">{stat.label}</div>
+              <div className="text-sm sm:text-base text-white">
+                {stat.label}
+              </div>
             </motion.div>
           ))}
         </motion.div>
-        <motion.div ref={introRef} className="text-white text-base text-center">
+        <motion.div
+          ref={introRef}
+          className="text-white text-sm sm:text-base text-center max-w-2xl"
+        >
           <p className="mb-4">
             Passionate developer creating modern web experiences
           </p>
@@ -219,7 +232,7 @@ function AboutSection() {
             {["Creative", "Reliable", "Innovative"].map((trait) => (
               <motion.span
                 key={trait}
-                className="px-2 py-1 text-xs font-semibold text-white bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full"
+                className="px-2 py-1 text-xs font-semibold text-white bg-gradient-to-r from-[rgba(139,92,246,1)] to-[rgba(34,211,238,1)] rounded-full"
                 variants={tagHoverVariants}
                 whileHover="hover"
               >
@@ -228,17 +241,18 @@ function AboutSection() {
             ))}
           </div>
         </motion.div>
-        <div className="md:flex gap-10">
+
+        <div className="md:flex gap-6 lg:gap-10">
           <motion.div
             ref={aboutCardRef}
-            className=" p-6 rounded-lg bg-gray-800/30 backdrop-blur-sm border-2 border-purple-500/30 max-w-md mx-auto mb-10"
+            className="p-4 sm:p-6 rounded-lg bg-[rgba(31,41,55,0.3)] backdrop-blur-sm border-2 border-[rgba(139,92,246,0.3)] max-w-md mx-auto mb-6 md:mb-0"
             variants={hoverVariants}
             whileHover="hover"
           >
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-3">
+            <h2 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[rgba(167,139,250,1)] to-[rgba(34,211,238,1)] mb-3">
               About Me
             </h2>
-            <div className="space-y-3 text-white text-base">
+            <div className="space-y-3 text-white text-sm sm:text-base">
               <p>
                 I'm a final-year Information Systems student at Gunadarma
                 University, passionate about front-end development and UI/UX
@@ -264,14 +278,14 @@ function AboutSection() {
 
           <motion.div
             ref={skillsCardRef}
-            className="p-6 rounded-lg bg-gray-800/30 backdrop-blur-sm border-2 border-purple-500/30 max-w-md mx-auto"
+            className="p-4 sm:p-6 rounded-lg bg-[rgba(31,41,55,0.3)] backdrop-blur-sm border-2 border-[rgba(139,92,246,0.3)] max-w-md mx-auto"
             variants={hoverVariants}
             whileHover="hover"
           >
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-3 flex items-center gap-2">
+            <h3 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[rgba(167,139,250,1)] to-[rgba(34,211,238,1)] mb-3 flex items-center gap-2">
               Skills & Technologies
             </h3>
-            <div className="space-y-4 ">
+            <div className="space-y-4">
               {skills.map((skill, index) => (
                 <motion.div
                   key={skill.name}
@@ -279,14 +293,17 @@ function AboutSection() {
                   transition={{ duration: 0.2 }}
                 >
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-white font-medium text-base group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text group-hover:text-transparent">
+                    <span className="text-white font-medium text-sm sm:text-base group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[rgba(167,139,250,1)] group-hover:to-[rgba(34,211,238,1)]">
                       {skill.name}
+                    </span>
+                    <span className="text-gray-400 text-xs sm:text-sm">
+                      {skill.level}%
                     </span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
                     <motion.div
                       id={`skill-bar-${index}`}
-                      className="h-full bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full"
+                      className="h-full bg-gradient-to-r from-[rgba(139,92,246,1)] to-[rgba(34,211,238,1)] rounded-full"
                     />
                   </div>
                 </motion.div>
