@@ -92,11 +92,10 @@ function WelcomeSection() {
           </span>
         </motion.p>
 
-        {/* Kartu Skill */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           {[
             {
-              title: "React & Next.js",
+              title: "React",
               desc: "Modern SPA and SSR with component-based UI.",
             },
             {

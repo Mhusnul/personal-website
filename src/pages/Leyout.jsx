@@ -62,7 +62,7 @@ function Leyout() {
       <div id="about">
         <AboutSection />
       </div>
-      <div id="welcome">
+      <div>
         <WelcomeSection />
       </div>
       <div id="specialization">

@@ -18,7 +18,7 @@ function HeroSection() {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=1000",
+          end: "+=900",
           scrub: 1,
           pin: true,
         },

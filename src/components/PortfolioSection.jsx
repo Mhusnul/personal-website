@@ -5,37 +5,48 @@ function PortfolioSection() {
   const projects = [
     {
       title: "E-Commerce Platform",
-      tech: ["React", "Node.js", "MongoDB"],
-      description: "Full-stack e-commerce solution with payment integration.",
+      tech: ["React", "Tailwind CSS", "FakeAPI"],
+      description:
+        "A full-featured e-commerce platform with login authentication, product listings, cart functionality, and simulated data integration using FakeAPI.",
+      url: ["https://store-sage-one.vercel.app/"],
     },
     {
-      title: "Task Management App",
-      tech: ["React", "TypeScript", "Firebase"],
-      description: "Collaborative task management with real-time updates.",
+      title: "Landing Page Valbury Securitas",
+      tech: ["React", "Tailwind CSS"],
+      description:
+        "A clean and responsive landing page inspired by Valbury Securitas, highlighting company services and strong call-to-action elements.",
+      url: ["https://valbuty-securitas-bpdq.vercel.app/"],
     },
     {
-      title: "Weather Dashboard",
-      tech: ["Vue.js", "API Integration"],
-      description: "Beautiful weather app with location-based forecasts.",
+      title: "Crypto Tracker",
+      tech: ["React", "API Integration"],
+      description:
+        "A real-time cryptocurrency tracking app using public APIs, featuring live price updates and a sleek, modern UI.",
+      url: ["https://crypto-tracker-fawn-nine.vercel.app/"],
     },
     {
-      title: "Portfolio Website",
-      tech: ["Next.js", "Tailwind CSS"],
-      description: "Responsive portfolio with smooth animations.",
+      title: "Movie App",
+      tech: ["React", "Tailwind CSS", "API Integration"],
+      description:
+        "An interactive movie discovery app with search and detailed film information powered by external API integration.",
+      url: ["https://movie-app-zeta-puce.vercel.app/"],
     },
     {
-      title: "Chat Application",
-      tech: ["React", "Socket.io", "Express"],
-      description: "Real-time messaging app with file sharing.",
+      title: "Blog Landing Page",
+      tech: ["React", "Tailwind CSS"],
+      description:
+        "A minimal and responsive blog landing page designed for personal branding or portfolio showcasing.",
+      url: ["https://save-the-day-blog.vercel.app/"],
     },
     {
       title: "Blog Platform",
-      tech: ["Gatsby", "GraphQL", "CMS"],
-      description: "Modern blog platform with SEO optimization.",
+      tech: ["WordPress"],
+      description:
+        "A modern blog platform built with WordPress, featuring SEO optimization, clean layout, and performance-focused design.",
+      url: ["https://savetheday.my.id/"],
     },
   ];
 
-  // Card animation variants
   const cardVariants = {
     hidden: { y: 30, opacity: 0 },
     visible: (i) => ({
@@ -102,7 +113,7 @@ function PortfolioSection() {
               </div>
               <motion.div className="flex gap-3">
                 <motion.a
-                  href="#"
+                  href={project.url}
                   className="px-4 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-sm font-semibold rounded-lg"
                   whileHover={{
                     scale: 1.05,
@@ -112,7 +123,7 @@ function PortfolioSection() {
                   View Demo
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="https://github.com/Mhusnul"
                   className="px-4 py-2 bg-gray-700/50 text-white text-sm font-semibold rounded-lg"
                   whileHover={{
                     scale: 1.05,

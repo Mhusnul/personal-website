@@ -6,31 +6,27 @@ function Navigation() {
   const [activeSection, setActiveSection] = useState("hero");
   const observerRef = useRef(null);
 
-  // Navigation links with corresponding section IDs
   const navLinks = [
     { name: "Home", id: "hero" },
     { name: "About", id: "about" },
-    { name: "Welcome", id: "welcome" },
     { name: "Specialization", id: "specialization" },
     { name: "Portfolio", id: "portfolio" },
     { name: "Experience", id: "experience" },
     { name: "Contact", id: "contact" },
   ];
 
-  // Smooth scroll to section
   const handleNavClick = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsOpen(false); // Close mobile menu
+    setIsOpen(false);
   };
 
-  // Observe sections to detect active section
   useEffect(() => {
     const options = {
       root: null,
-      threshold: 0.5, // Trigger when 50% of section is visible
+      threshold: 0.5,
     };
 
     observerRef.current = new IntersectionObserver((entries) => {
@@ -52,9 +48,8 @@ function Navigation() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-60 bg-black/50 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-60 backdrop-blur-md">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
         <motion.div
           className="text-xl font-bold bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-text text-transparent"
           initial={{ opacity: 0 }}
@@ -90,7 +85,6 @@ function Navigation() {
           ))}
         </div>
 
-        {/* Mobile Hamburger */}
         <button
           className="md:hidden text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
@@ -112,10 +106,9 @@ function Navigation() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <motion.div
-          className="md:hidden bg-black/90 backdrop-blur-lg flex flex-col items-center py-6 space-y-4"
+          className="md:hidden backdrop-blur-lg flex flex-col items-center py-6 space-y-4"
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "auto", opacity: 1 }}
           transition={{ duration: 0.3 }}
@@ -144,18 +137,6 @@ function Navigation() {
           ))}
         </motion.div>
       )}
-
-      <style jsx>{`
-        @keyframes gradientShift {
-          0%,
-          100% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-        }
-      `}</style>
     </nav>
   );
 }
