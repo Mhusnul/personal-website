@@ -46,7 +46,6 @@ function ExperienceSection() {
     }),
     hover: {
       scale: 1.05,
-      boxShadow: " rgba(139, 92, 246, 0.2)",
       transition: { duration: 0.3 },
     },
   };
@@ -54,7 +53,7 @@ function ExperienceSection() {
   const badgeVariants = {
     hover: {
       scale: 1.1,
-      boxShadow: "0 2px 8px rgba(139, 92, 246, 0.3)",
+      boxShadow: "0 2px 8px rgba(91, 233, 255, 0.3)",
       transition: { duration: 0.3 },
     },
   };
@@ -69,7 +68,7 @@ function ExperienceSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-500 to-cyan-100 bg-clip-text text-transparent mb-4">
             Experience
           </h2>
           <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto">
@@ -78,7 +77,7 @@ function ExperienceSection() {
         </motion.div>
 
         <div className="max-w-3xl mx-auto relative">
-          <div className="absolute left-1/2 -translate-x-1/2 w-2 h-full bg-gradient-to-b from-purple-500 to-cyan-500 hidden md:block"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 w-2 h-full bg-gradient-to-b from-cyan-500 to-cyan-100 hidden md:block"></div>
 
           {experiences.map((exp, i) => (
             <motion.div
@@ -88,7 +87,7 @@ function ExperienceSection() {
               }`}
             >
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold z-10 md:-top-2"
+                className="absolute left-1/2 -translate-x-1/2 top-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-cyan-500 to-cyan-100 rounded-full flex items-center justify-center text-black text-xs sm:text-sm font-bold z-10 md:-top-2"
                 variants={badgeVariants}
                 whileHover="hover"
               >
@@ -106,11 +105,11 @@ function ExperienceSection() {
                 custom={i}
                 viewport={{ once: true }}
               >
-                <div className="p-4 sm:p-6 rounded-lg bg-gray-800/30 backdrop-blur-sm border-2 border-purple-500/30">
-                  <div className="text-purple-400 text-xs sm:text-sm font-semibold mb-1">
+                <div className="p-4 sm:p-6 rounded-lg bg-[rgba(31,41,55,0.3)] backdrop-blur-sm border-2 border-[rgba(91,233,255,0.3)]">
+                  <div className="text-gray-400 text-xs sm:text-sm font-semibold mb-1">
                     {exp.year}
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-cyan-500 to-cyan-100 bg-clip-text text-transparent">
                     {exp.title}
                   </h3>
                   <div className="text-white text-sm sm:text-base mb-2">
@@ -123,7 +122,7 @@ function ExperienceSection() {
                     {exp.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="px-2 py-1 text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full"
+                        className="px-2 py-1 text-xs sm:text-sm font-semibold text-black bg-gradient-to-r from-cyan-500 to-cyan-100 rounded-full"
                       >
                         {skill}
                       </span>

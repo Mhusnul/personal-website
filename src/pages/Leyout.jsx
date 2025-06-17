@@ -18,23 +18,74 @@ function Leyout() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black to-indigo-950 relative overflow-hidden">
       <div className="fixed inset-0 pointer-events-none z-[5]">
-        {Array.from({ length: 5 }).map((_, i) => (
+        {Array.from({ length: 12 }).map((_, i) => (
           <motion.div
             key={i}
-            className="floating-element absolute w-2 h-2 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full opacity-30"
+            className="floating-element absolute"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
-            animate={{ y: [-10, 10, -10], opacity: [0.3, 0.5, 0.3] }}
-            transition={{ duration: 3, repeat: Infinity, delay: Math.random() }}
-          />
+            animate={{
+              opacity: [0, 1, 0],
+              scale: [0.5, 1.5, 0.5],
+              rotate: [0, 180, 360],
+            }}
+            transition={{
+              duration: 2 + Math.random() * 3,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: "easeInOut",
+            }}
+          >
+            <div className="relative w-4 h-4">
+              <div
+                className="absolute inset-0 bg-gradient-to-r from-yellow-300 via-white to-cyan-300 transform rotate-0"
+                style={{
+                  width: "2px",
+                  height: "16px",
+                  left: "7px",
+                  top: "0px",
+                }}
+              ></div>
+              <div
+                className="absolute inset-0 bg-gradient-to-r from-yellow-300 via-white to-cyan-300 transform rotate-90"
+                style={{
+                  width: "2px",
+                  height: "16px",
+                  left: "7px",
+                  top: "0px",
+                }}
+              ></div>
+
+              <div
+                className="absolute inset-0 bg-gradient-to-r from-yellow-200 via-white to-blue-200 transform rotate-45 opacity-70"
+                style={{
+                  width: "1px",
+                  height: "12px",
+                  left: "7.5px",
+                  top: "2px",
+                }}
+              ></div>
+              <div
+                className="absolute inset-0 bg-gradient-to-r from-yellow-200 via-white to-blue-200 transform rotate-135 opacity-70"
+                style={{
+                  width: "1px",
+                  height: "12px",
+                  left: "7.5px",
+                  top: "2px",
+                }}
+              ></div>
+
+              <div className="absolute w-2 h-2 bg-white rounded-full top-1 left-1 opacity-80 shadow-lg shadow-cyan-300/50"></div>
+            </div>
+          </motion.div>
         ))}
       </div>
 
       {/* Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 origin-left z-50 mt-15"
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 to-cyan-100 origin-left z-50 mt-15"
         style={{ scaleX: smoothProgress }}
       />
 
